@@ -5,14 +5,14 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/HansBukerG/Programa05-RestMySql/app/httpHandlers"
+	"github.com/HansBukerG/Programa05-RestMySql/app/services/httpService"
 	"github.com/HansBukerG/Programa05-RestMySql/app/routes"
 	"github.com/gorilla/mux"
 )
 
 func App_init() {
 	fmt.Println("Conexion con servidor mysql");
-	HttpHandlers.ConexionMysql();
+	HttpService.ConexionMysql();
 
 	route := mux.NewRouter();
 
